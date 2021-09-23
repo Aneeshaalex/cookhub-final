@@ -1,0 +1,74 @@
+  <body> 
+    <div class="signup-form">
+      <form #usersignup="ngForm" (ngSubmit)="AddUser()">
+        <div class="col-xs-8 col-xs-offset-4">
+          <h2>Sign Up</h2>
+        </div>
+        <div class="form-group">
+          
+          <div class="col-xs-8">
+            <input
+                type="text"
+                name="username"
+                
+                [(ngModel)]="userItem.username"
+                #username="ngModel"
+                [class.is-invalid]="username.invalid && username.touched"
+         
+                value=""
+                width="5px"
+                required
+              autocomplete="off"
+              placeholder="Enter your username"
+              class="form-control"
+              
+              id="name"
+              pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?"
+              title="Invalid username"
+              required
+            />
+            
+            <small
+            class="text-danger"
+            [class.d-none]="
+              username.valid || username.touched || username.pristine
+            "
+            >Username is required</small
+          >
+          </div>
+          <label for="error" id="error"></label>
+        </div>
+        
+
+        <div class="form-group">
+          <i class="fa fa-key" ></i>
+          <input type="password" name="paswd" id="pwd"  [(ngModel)]= "userItem.psw"
+          #paswd="ngModel" [class.is-invalid]="paswd.invalid && paswd.touched" minlength="8" class="form-control input" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <small class="text-danger" [class.d-none] = "paswd.valid||paswd.touched||paswd.pristine">Password must be strong<p style="font-size: 13px;">(Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters)</p></small>
+          <br>
+       </div>
+    
+      
+        
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-4">
+            <input
+          type="submit"
+          
+          class="btnsignup"
+          value="Register"
+        />
+            
+          </div>
+        </div>
+      </form>
+      <!-- <div class="text-center">
+        Dont have an account? <a href="signup.html">Login here</a>
+      </div> -->
+    </div>
+
+    <!--end of form-->
+  </body>
+
+  

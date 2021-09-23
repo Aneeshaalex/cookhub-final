@@ -1,0 +1,39 @@
+
+
+
+div{
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  background-image: url("receipe3.jpg");
+
+ 
+  animation-name: example;
+  animation-duration: 10s;
+  
+    padding: 5px;
+    height: 100%;
+    font-size: x-large;
+}
+@keyframes example {
+    10%   {background-image: url("receipe3.jpg");}
+    50%  {background-image: url("receipe15.jpg");}
+    100%  {background-image: url("receipe2.jpg");}
+    
+  }
+.card{
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.table{
+    
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+font-family: cursive;
+text-transform: uppercase;
+font-weight: bolder;
+}

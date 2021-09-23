@@ -1,0 +1,45 @@
+
+<div style="padding-bottom: 25%;">
+    <div class='card'>
+        <form (ngSubmit)="UpdateRecipe()">
+    <div class="card-header">
+       
+    </div>
+    <div class="card-body">
+        <div class='table-responsive'>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td> <label>Receipe Name</label></td>
+                        <td> <input type="text" name="Name of the receipe" [(ngModel)]="recipeItem.title"/></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Ingredients</label></td>
+                        <td> <input type="text" name="ingredients" [(ngModel)]="recipeItem.ingredients"/></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Preparation Steps</label></td>
+                        <td> <input type="text" name="steps" [(ngModel)]="recipeItem.steps"/></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Video link</label></td>
+                        <td> <input type="url" name="video" [(ngModel)]="recipeItem.link"/></td>
+                    </tr>
+    
+                    <tr>
+                        <td> <label>Image</label></td>
+                        <td> <input type="url" name="image" [(ngModel)]="recipeItem.imageUrl"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Submit" /></td>                  
+                      </tr>             
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </form>
+    </div>
+
+
+

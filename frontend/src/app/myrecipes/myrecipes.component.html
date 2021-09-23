@@ -1,0 +1,65 @@
+
+
+<body>
+
+<div class='card'>
+  <div class='card-header'>
+     
+    
+  
+  <div *ngIf="_auth.loggedIn()" class="card-body">
+    
+      
+        
+      
+      <div class='table-responsive' >
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>
+                          <button class="btn btn-primary">
+                              Show image
+                          </button>
+                      </th>
+                      <th>NAME</th>
+                      <th>INGREDIENTS</th>
+                      <th>VIDEO LINK</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let rec of recipes'>
+                            <td><img [src] = 'rec.imageUrl'
+                                [title] = 'rec.title'
+                                [style.width.px] = 'imageWidth'
+                                [style.height.px] = 'imageHeight'
+                                [style.margin.px] = 'imageMargin'>
+    
+                            </td>
+                           
+                            <td>{{ rec.title }}</td>
+                        <td>{{ rec.ingredients }}</td>
+                        <td>{{ rec.link }}</td>
+                        
+                        <td>
+                          <div *ngIf="_auth.loggedIn()" class="buttons" style="float: right;margin-right: 5%;">
+                            <button id="update" (click) = "UpdateRecipe(rec)">
+                              <i class="fa fa-edit"></i>&nbsp;Edit</button>&nbsp;
+                              <span>
+                                <button type="button"  (click) = "DeleteRecipe(rec)" id="delete" onclick="return confirm('Delete?');">
+                                  <i class="fa fa-trash"></i> &nbsp;Delete</button></span>
+                            </div>
+                            </td>
+                          </tr>
+                          
+                            
+                          
+                          </tbody>
+                          </table>
+                          </div>
+                          
+                          </div>
+                          
+                          
+                          <div class="btns">
+                            <a href="/addrecipes" class="btn-menu animated fadeInUp scrollto">Click to add receipes</a>
+                            
+                          </div>

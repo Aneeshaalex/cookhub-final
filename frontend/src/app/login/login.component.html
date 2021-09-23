@@ -1,0 +1,67 @@
+<!-- 
+  <form #userlogin ="ngForm" (ngSubmit)="loginUser()">
+  <label>Enter Username:   </label>
+  <input type="text" name="username" [(ngModel)]= "user.username">
+  <button type="submit" >LOGIN</button><br>
+  </form>  -->
+  <body> 
+    <div class="signup-form">
+      <form #userlogin ="ngForm" (ngSubmit)="loginUser()" >
+        <div class="col-xs-8 col-xs-offset-4">
+          <h2>Login</h2>
+        </div>
+        <div class="form-group">
+          
+          <div class="col-xs-8">
+            <input
+              type="text"
+              name="username"
+              [(ngModel)]= "user.username"
+              autocomplete="off"
+              placeholder="Enter your username"
+              class="form-control"
+              
+              id="name"
+              pattern="([A-Za-z0-9\.\-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?"
+              title="Invalid email"
+              required
+            />
+          </div>
+          <label for="error" id="error"></label>
+        </div>
+
+         <div class="form-group">
+         
+          <div class="col-xs-8">
+            <input
+              type="password"
+              id="psw"
+              name="psw"
+             
+              placeholder="Enter your password"
+              autocomplete="off"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain a minimum of 8 characters, atleast one uppercase, one lowercase, one digit"
+              class="form-control"
+              required
+            />
+          </div>
+        </div> 
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-4">
+
+            <button type="submit"  class="btn btn-primary btn-lg log"> 
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="text-center">
+        Dont have an account? <a href="signup.html">Register here</a>
+      </div>
+    </div>
+
+    <!--end of form-->
+  </body>
+

@@ -1,0 +1,59 @@
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+
+td{
+    font-family: cursive;
+    font-size: larger;
+}
+.card {
+  width: 100%;
+  height: 100vh;
+  background: url("receipe29.webp") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  
+}
+.card-body{
+  background-color: white;
+  background-origin: padding-box;
+  
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.btns{
+  margin-top: 30px;
+  margin-left: 700px;
+  
+  
+}
+
+
+ .btn-menu, #hero .btn-book {
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #f17501d5;
+  border: 2px solid #f17501d5;
+  text-decoration: none;
+}
+
+.btn-menu:hover, #hero .btn-book:hover {
+  background: #f17501d5;
+  color: #fff;
+}
+
+ .btn-book {
+  margin-left: 15px;
+}

@@ -1,0 +1,41 @@
+<header>
+  <div class="bs-example main">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a href="#" class="navbar-brand">
+        <img
+          src="/assets/images/logob.png"
+          class="circular--square"
+          height="80px"
+          width="80px"
+          alt="Logo"
+        />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        (click)="isShown = !isShown"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon collap"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarCollapse"
+        [ngClass]="{ show: isShown }"
+      >
+        <div class="navbar-nav">
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/welcome" class="nav-item nav-link active hov">Home</a></li>
+            <li><a class="nav-item nav-link hov" routerLink="/myrecipes" *ngIf = _auth.loggedIn() >Recipes</a></li>
+            <!-- <li><a class="nav-item nav-link hov">About Us</a></li> -->
+            <li><a class="nav-item nav-link hov" routerLink="/login" *ngIf = !_auth.loggedIn()>Login</a></li>
+            <a class="nav-link" routerLink="/signup" *ngIf = !_auth.loggedIn()>Sign up</a>
+            <li><a class="nav-item nav-link hov" (click) = "logoutUser()" *ngIf = _auth.loggedIn() routerLink="/">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

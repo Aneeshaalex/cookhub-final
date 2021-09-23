@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.text{
+  opacity: 0.8;
+  font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: cursive;
+  color:whitesmoke;
+}
+.quo{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: cursive;
+  color: orange;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  .quotes{
+    margin-left: 700px;
+  }
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+
+body{
+  width: 100%;
+  background-image: url("receipe10.jpg");
+
+ 
+  animation-name: example;
+  animation-duration: 10s;
+  
+}
+@keyframes example {
+  10%   {background-image: url("receipe10.jpg");}
+  50%  {background-image: url("receipe2.jpg");}
+  100%  {background-image: url("receipe8.jpg");}
+  
+}
+
+.search {
+  width: 100%;
+  
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.searchTerm {
+  
+  border: 3px solid rgba(255, 0, 0, 0.8);
+  border-right: none;
+  padding: 5px;
+  height: 100px;
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.searchButton {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(255, 0, 0, 0.8);
+  background: rgba(255, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video{
+    margin-top: 300px;
+    margin-left: 100px;
+}
